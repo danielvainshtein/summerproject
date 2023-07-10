@@ -73,7 +73,7 @@ function clickButton() {
         alert("חובה למלא סיסמה");
         return false;
     }
-
+// בדיקת סיסמה:
     const pass2 = document.getElementById("password2").value;
     if (pass2 == ""){
         alert("חובה למלא אימות סיסמה");
@@ -84,7 +84,11 @@ function clickButton() {
         alert("אימות סיסמה שגוי");
         return false;
     }
-       
+     // סיסמה פחות מ6 תווים
+     const password1 = document.getElementById("password").value;
+     if (password1.length < 6) {
+         alert("חייב מינימום 6 תויים לסיסמה");
+         return false;   
     
 }
 document.getElementById("register").addEventListener("click", clickButton);
