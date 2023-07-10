@@ -67,28 +67,28 @@ function clickButton() {
         alert("הגיל חייב להיות בין 18-65");
         return false;
     } 
-
-    const pass1 = document.getElementById("password").value;
-    if(pass1 == ""){
+    // בדיקת סיסמה:
+    const password1 = document.getElementById("password").value;
+    if(password1 == ""){
         alert("חובה למלא סיסמה");
         return false;
     }
-// בדיקת סיסמה:
-    const pass2 = document.getElementById("password2").value;
-    if (pass2 == ""){
+
+    const password2 = document.getElementById("password2").value;
+    if (password2 == ""){
         alert("חובה למלא אימות סיסמה");
         return false;
     }
 
-    if (pass1 != pass2){
+    if (password1 != password2){
         alert("אימות סיסמה שגוי");
         return false;
     }
      // סיסמה פחות מ6 תווים
-     const password1 = document.getElementById("password").value;
      if (password1.length < 6) {
          alert("חייב מינימום 6 תויים לסיסמה");
          return false;   
     
+}
 }
 document.getElementById("register").addEventListener("click", clickButton);
