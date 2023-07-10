@@ -1,6 +1,6 @@
 function checkEnglish(txt) {
     for (let i = 0; i < txt.length; i++) {
-        if (!(txt.charAt(i) >= "A" && txt.charAt(i) <= "Z")){
+        if (!(txt.charAt(i) >= "A" && txt.charAt(i) <= "z")){
             return false;
         }
         {
