@@ -1,3 +1,5 @@
+const users = [];
+
 function checkEnglish(txt) {
     for (let i = 0; i < txt.length; i++) {
         if (!(txt.charAt(i) >= "A" && txt.charAt(i) <= "z")) {
@@ -35,6 +37,9 @@ function clickButton() {
     //שם משתמש רק באנגלית
 
     const username = document.getElementById("username").value
+    const testusername = users.some(function (n) {
+        return username == n.username
+    })
 
     if (checkEnglish(username) == false) {
         alert("הכנס שם משתמש רק באנגלית");
@@ -46,13 +51,12 @@ function clickButton() {
         alert("הכנס שם משתמש יותר מ-4 תווים");
         return false;
     }
-    //משתמש קיים במערכת
-    const registerUserNames = [];
-    if (registerUserNames.indexOf(username) > -1) {
-        alert("שם משתמש קיים במערכת");
+    // משתמש קיים במערכת
+ 
+    if(testusername == true) {
+        alert("שם המשתמש קיים במערכת")
         return false;
     }
-
 
     //שם פרטי מינימום 2 אותיות
     const first_name = document.getElementById("name").value;
@@ -86,8 +90,6 @@ function clickButton() {
         return false;
     }
 
-
-    
     if (password1 != password2) {
         alert("אימות סיסמה שגוי");
         return false;
@@ -100,5 +102,19 @@ function clickButton() {
         return false;
 
     }
+    else{{
+        users.push({
+            email: email,
+            username: username,
+            first_name: first_name,
+            last_name: last_name,
+            age: age,
+            password1:password1,
+         })
+        
+    }
+    var jason = JSON.stringify(users);
+        localStorage.setItem("data" , jason)
+}
 }
 document.getElementById("register").addEventListener("click", clickButton);
