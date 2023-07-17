@@ -13,9 +13,9 @@ document.getElementById('signin').addEventListener('click', function (e) {
         
         return item.username == username && item.password1 == password;
     });
-    console.log(user)
+    
     if (user) {
-        alert('logged in');
+        window.location.href = ("homepage.html");
     } else {
         alert('שם המשתמש או הסיסמה שגויים');
     }

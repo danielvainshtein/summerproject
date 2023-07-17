@@ -1,21 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
 </head>
+
 <body dir="rtl">
-    <label>איימיל:<input id="email" type="email"></label> 
-    <label>שם משתמש:<input id="username" type="text"></label><!--4 תווים לפחות-->
-    <label>סיסמה:<input id="password" type="password"></label><!--6 תווים לפחות,אות אחת,מספר אחד-->
-    <label>הכנס סיסמה בשנית:<input id="password2" type="password"></label><!--לבדוק שהסיסמאות תואמות-->
-    <label>שם פרטי:<input id="name" type="text"></label><!--כולל לפחות 2 אותיות-->
-    <label>שם משפחה:<input id="lastname" type="text"></label><!--כולל לפחות 2 אותיות-->
-    <label>גיל:<input id="age" type="number"></label><!--מספר 18-65-->
+    <ul class="nav nav-pills">
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="singin.html">התחברות</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="registration.html">דף הרשמה</a>
+        </li>
+       
+    </ul>
+    <h1>דף הרשמה</h1>
+    <div>יש להזין את כל הערכים באנגלית</div><br>
+    <label>איימיל:<input id="email" type="email"></label><br><br>
+    <label>שם משתמש:<input id="username" type="text"></label><br><br> <!--4 תווים לפחות-->
+    <label>סיסמה:<input id="password" type="password"></label><br><br> <!--6 תווים לפחות,אות אחת,מספר אחד-->
+    <label>הכנס סיסמה בשנית:<input id="password2" type="password"></label><br><br> <!--לבדוק שהסיסמאות תואמות-->
+    <label>שם פרטי:<input id="name" type="text"></label><br><br> <!--כולל לפחות 2 אותיות-->
+    <label>שם משפחה:<input id="lastname" type="text"></label><br><br> <!--כולל לפחות 2 אותיות-->
+    <label>גיל:<input id="age" type="number"></label><br><br> <!--מספר 18-65-->
     <button id="register">הרשמה</button>
 
     <script src="registration.js"></script>
 </body>
+
 </html>

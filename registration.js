@@ -113,6 +113,11 @@ function clickButton() {
          })
         
     }
+    if (users) {
+        window.location.href = ("singin.html");
+    } else {
+        alert('יש להזין את הפרטים כנדרש');
+    }
     var jason = JSON.stringify(users);
         localStorage.setItem("data" , jason)
 }
