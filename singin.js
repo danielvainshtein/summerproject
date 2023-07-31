@@ -15,6 +15,7 @@ document.getElementById('signin').addEventListener('click', function (e) {
     });
     
     if (user) {
+    
         window.location.href = ("homepage.html");
     } else {
         alert('שם המשתמש או הסיסמה שגויים');

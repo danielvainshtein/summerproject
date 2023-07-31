@@ -114,6 +114,7 @@ function clickButton() {
         
     }
     if (users) {
+        alert("ההרשמה בוצעה בהצלחה")
         window.location.href = ("singin.html");
     } else {
         alert('יש להזין את הפרטים כנדרש');
