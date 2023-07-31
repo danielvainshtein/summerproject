@@ -1,4 +1,4 @@
-const users = [];
+const users = JSON.parse(localStorage.getItem('data')) || [];
 
 function checkEnglish(txt) {
     for (let i = 0; i < txt.length; i++) {

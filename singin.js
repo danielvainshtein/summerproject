@@ -15,7 +15,8 @@ document.getElementById('signin').addEventListener('click', function (e) {
     });
 
     if (user) {
-    
+        window.localStorage.setItem("currentUser", user.first_name)
+        window.localStorage.setItem("remmberme", document.getElementById("remmberme").checked)
         window.location.href = ("homepage.html");
     } else {
         alert('שם המשתמש או הסיסמה שגויים');
