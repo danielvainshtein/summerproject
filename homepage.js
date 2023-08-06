@@ -1,5 +1,5 @@
 const userName = window.localStorage.getItem("currentUser");
-document.getElementById("name").innerHTML =  "Hello" + " " + userName;
+document.getElementById("name").innerHTML =  "שלום" + " " + userName;
 
 
 

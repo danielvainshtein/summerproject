@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+</head>
+<body dir="rtl">
+    <div class="container">
+        <ul class="nav nav-pills">
+        <li class="nav-item">
+            <a class="nav-link" href="homepage.html">דף הבית</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="expenses.html">דף הוצאות</a>
+        </li>
+    </ul><br>
+    <form>
+    <h1>הוצאות</h1>
+    <br>
+    <label>תאריך:<input id="expenses_date" type="date"></label><br><br>
+    <SELECT id="types_expenses">
+        <label>סוג הוצאה:
+        <OPTION id="expenses_taxi" value="taxi"> מוניות </OPTION>
+        <OPTION id="expenses_food" value="food"> אוכל </OPTION>
+        <OPTION id="expenses_clothes" value="clothes"> ביגוד </OPTION>
+        </label>
+    </SELECT>
+    <br><br>
+    <label>סה"כ הוצאה:<input id="sum" type="number"></label><br><br>
+    <br>
+    <button id="tbn_expenses" onclick="details()">שלח</button>
+    
+</form>
+<script src="expenses.js></script>
+
+</body>
+</html>
