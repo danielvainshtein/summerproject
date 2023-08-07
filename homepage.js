@@ -1,5 +1,5 @@
 const userName = window.localStorage.getItem("currentUser");
-document.getElementById("name").innerHTML =  "שלום" + " " + userName;
+document.getElementById("name").innerHTML = "שלום" + " " + userName;
 
 
 
@@ -32,3 +32,24 @@ console.log(shifts);
 document.getElementById('totalHours').innerHTML = 'Total ' + shifts.reduce(function (acc, curr) {
     return acc + curr.totalHours;
 }, 0)
+
+
+
+
+/* Expenses management */
+var expenses = JSON.parse(window.localStorage.getItem(userName + 'expenses')) || [];
+
+function calculateTotalExpenses() {
+    let totalExpenses = 0;
+    for (let i = 0; i < expenses.length; i++) {
+        totalExpenses += expenses[i].sum
+    }
+    return totalExpenses;
+}
+
+const totalExpenses = calculateTotalExpenses();
+console.log("Total Expenses:", totalExpenses);
+
+document.getElementById("totalexpenses").innerHTML = "total expenses" + totalExpenses
+/* end of Expenses management */
+
