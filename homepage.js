@@ -50,6 +50,6 @@ function calculateTotalExpenses() {
 const totalExpenses = calculateTotalExpenses();
 console.log("Total Expenses:", totalExpenses);
 
-document.getElementById("totalexpenses").innerHTML = "total expenses" + totalExpenses
+document.getElementById("totalexpenses").innerHTML = "total expenses" + " " + totalExpenses
 /* end of Expenses management */
 
