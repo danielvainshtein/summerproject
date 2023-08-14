@@ -26,20 +26,12 @@ function checkEnglish(txt) {
 }
 
 
-function clickButton() {
-    //בדיקת איימיל
+function validations() {
     const email = document.getElementById("updateEmail").value;
-    if (email.indexOf("@") == -1) {
+    if (email.indexOf("@") == -1 ||
+        email.indexOf(".") == -1 ||
+        email.indexOf("@") != email.lastIndexOf("@")) {
         alert("הכנס אימייל תקין ");
-        return false;
-    }
-
-    if (email.indexOf(".") == -1) {
-        alert("הכנס אימייל תקין ");
-        return false;
-    }
-    if (email.indexOf("@") != email.lastIndexOf("@")) {
-        alert("אסור יותר משטורדל אחד");
         return false;
     }
 
@@ -67,6 +59,25 @@ function clickButton() {
         alert("הגיל חייב להיות בין 18-65");
         return false;
     }
+
+    return true;
 }
 
 
+document.getElementById('save').addEventListener('click', function (e) {
+    e.preventDefault();
+    const isValid = validations();
+    if (isValid) {
+        const userIndex = data.findIndex((u) => u.username == currentUser);
+        data[userIndex].email = document.getElementById("updateEmail").value;
+        data[userIndex].first_name = document.getElementById("updateName").value;
+        data[userIndex].last_name = document.getElementById("updateLastname").value;
+        data[userIndex].age = document.getElementById("updateAge").value;
+        window.localStorage.setItem('data', JSON.stringify(data));
+        document.getElementById('feedback').classList.remove('invisible');
+        setTimeout(() => {
+            document.getElementById('feedback').classList.add('invisible');
+        }, 5000)
+    }
+
+});

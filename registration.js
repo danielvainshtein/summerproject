@@ -1,3 +1,4 @@
+const DEBUG_MODE = true;
 const users = JSON.parse(localStorage.getItem('data')) || [];
 
 function checkEnglish(txt) {
@@ -11,8 +12,8 @@ function checkEnglish(txt) {
     }
 }
 
-
-function clickButton() {
+function clickButton(e) {
+    e.preventDefault();
     //בדיקת איימיל
     const email = document.getElementById("email").value;
     if (email.indexOf("@") == -1) {
@@ -52,8 +53,8 @@ function clickButton() {
         return false;
     }
     // משתמש קיים במערכת
- 
-    if(testusername == true) {
+
+    if (testusername == true) {
         alert("שם המשתמש קיים במערכת")
         return false;
     }
@@ -102,25 +103,40 @@ function clickButton() {
         return false;
 
     }
-    else{{
-        users.push({
-            email: email,
-            username: username,
-            first_name: first_name,
-            last_name: last_name,
-            age: age,
-            password1:password1,
-         })
-        
+    else {
+        {
+            users.push({
+                email: email,
+                username: username,
+                first_name: first_name,
+                last_name: last_name,
+                age: age,
+                password1: password1,
+            })
+
+        }
+        if (users) {
+            var jason = JSON.stringify(users);
+            localStorage.setItem("data", jason)
+
+            alert("ההרשמה בוצעה בהצלחה")
+            window.location.href = "singin.html";
+        } else {
+            alert('יש להזין את הפרטים כנדרש');
+        }
+
     }
-    if (users) {
-        alert("ההרשמה בוצעה בהצלחה")
-        window.location.href = ("singin.html");
-    } else {
-        alert('יש להזין את הפרטים כנדרש');
-    }
-    var jason = JSON.stringify(users);
-        localStorage.setItem("data" , jason)
-}
 }
 document.getElementById("register").addEventListener("click", clickButton);
+
+
+if (DEBUG_MODE) {
+    document.getElementById("email").value = 'example@mail.com';
+    document.getElementById("username").value = 'example';
+    document.getElementById("password").value = 'qwe123';
+    document.getElementById("password2").value = 'qwe123';
+    document.getElementById("name").value = 'example';
+    document.getElementById("lastname").value = 'example_last';
+    document.getElementById("age").value = '20';
+
+}

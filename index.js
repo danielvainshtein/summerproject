@@ -1,4 +1,8 @@
 const userName = window.localStorage.getItem("currentUser");
+if (userName == null) {
+    alert("Not logged");
+    window.location.href = ("singin.html");
+}
 document.getElementById("name").innerHTML = "שלום" + " " + userName;
 
 

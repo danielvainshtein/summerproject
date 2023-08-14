@@ -9,30 +9,47 @@
 </head>
 
 <body dir="rtl">
-    
+
     <div class="container">
         <ul class="nav nav-pills">
             <li class="nav-item">
-                <a class="nav-link active" href="index.html">דף הבית</a>
+                <a class="nav-link" href="index.html">דף הבית</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="expenses.html">דף הוצאות</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="profile.html">דף פרופיל</a>
+                <a class="nav-link active" href="profile.html">דף פרופיל</a>
             </li>
         </ul>
     </div>
     <div class="container">
         <form>
-        <h1>דף פרופיל</h1>
-        <div>יש להזין את כל הערכים באנגלית</div><br>
-        <label>איימיל:<input id="updateEmail" type="email"></label><br><br>
-        <label>שם פרטי:<input id="updateName" type="text"></label><br><br> <!--כולל לפחות 2 אותיות-->
-        <label>שם משפחה:<input id="updateLastname" type="text"></label><br><br> <!--כולל לפחות 2 אותיות-->
-        <label>גיל:<input id="updateAge" type="number"></label><br><br> <!--מספר 18-65-->
-        <button id="save">שמור</button>
-    </form>
+            <h1>דף פרופיל</h1>
+            <div>יש להזין את כל הערכים באנגלית</div><br>
+            <div class="mb-3">
+                <label class="form-label" for="updateEmail">איימיל:</label>
+                <input class="form-control" id="updateEmail" type="email">
+
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="updateName">שם פרטי:</label>
+                <input class="form-control" id="updateName" type="text">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="updateLastname">שם משפחה:</label>
+                <input class="form-control" id="updateLastname" type="text">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="updateAge">גיל:</label>
+                <input class="form-control" id="updateAge" type="number">
+            </div>
+
+            <button id="save" class="btn btn-primary">שמור</button>
+            <div id="feedback" class="alert alert-success invisible" role="alert">
+                Updated Succesfuly
+            </div>
+        </form>
     </div>
     <script src="profile.js"></script>
 
