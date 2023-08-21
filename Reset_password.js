@@ -28,7 +28,7 @@ document.getElementById("save_password").addEventListener('click', function (e) 
 
     console.log(number_random);
     if (data[userIndex].password1 != document.getElementById("Current_password").value) {
-        alert("Wrong pass")
+        alert("הסיסמה שגויה")
     } else {
         document.getElementById('inputContainer').classList.remove('invisible');
 
