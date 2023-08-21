@@ -1,6 +1,6 @@
 const userName = window.localStorage.getItem("currentUser");
 if (userName == null) {
-    alert("Not logged");
+    alert("לא התחברת");
     window.location.href = ("singin.html");
 }
 document.getElementById("name").innerHTML = "שלום" + " " + userName;
