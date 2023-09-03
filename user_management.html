@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>user management</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <body dir="rtl">
+        <div class="container">
+            <ul class="nav nav-pills">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">דף הבית</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="expenses.html">דף הוצאות</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="profile.html">דף פרופיל</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="user_management.html">דף ניהול משתמש</a>
+                </li>
+            </ul>
+            <br>
+        </div>
+        <div class="container">
+            <form>
+                <h1> ניהול משתמש</h1>
+                <table border="1">
+                    <tr>
+                        <th>תאריך התחלה ושעה</th>
+                        <th>תאריך סיום ושעה</th>
+                        <th>סה"כ שעות</th>
+                        <th>מחיקה</th>
+                    </tr>
+                    <tr>
+                        <td>שורה 1, תא 1</td>
+                        <td>שורה 1, תא 2</td>
+                        <td>שורה 1, תא 3</td>
+                        <td>שורה 1, תא 3</td>
+                    </tr>
+                    <tr>
+                        <td>שורה 1, תא 1</td>
+                        <td>שורה 1, תא 2</td>
+                        <td>שורה 1, תא 3</td>
+                        <td>שורה 1, תא 3</td>
+                    </tr>
+                    <tr>
+                        <td>שורה 1, תא 1</td>
+                        <td>שורה 1, תא 2</td>
+                        <td>שורה 1, תא 3</td>
+                        <td>שורה 1, תא 3</td>
+                    </tr>
+
+                </table>
+                <br><br>
+                <div class="mb-3">
+                    <label class="form-label" for="start_of_shift">הכנס תאריך התחלה ושעה</label>
+                    <input class="form-control" id="start_of_shift" type="datetime-local">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="End_of_shift">הכנס תאריך סיום ושעה</label>
+                    <input class="form-control" id="End_of_shift" type="datetime-local">
+                </div>
+
+
+
+                <br><br>
+                <button class="btn btn-primary">להגיש טופס</button>
+
+
+
+
+
+
+        </div>
+        </form>
+        <script src="user_management.js"></script>
+    </body>
+
+</html>
