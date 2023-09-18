@@ -1,5 +1,5 @@
 
-fetch('/templates/nav.html').then(res => res.text()).then(function (html) {
+fetch('templates/nav.html').then(res => res.text()).then(function (html) {
     document.getElementById('nav').innerHTML = html;
 
     document.querySelectorAll('.nav-link').forEach(function (navItem) {
